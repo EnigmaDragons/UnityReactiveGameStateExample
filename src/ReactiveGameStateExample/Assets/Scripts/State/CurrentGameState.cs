@@ -26,5 +26,4 @@ public sealed class CurrentGameState : ScriptableObject
         state = apply(state);
         Message.Publish(new GameStateChanged(state));
     }
-
 }

@@ -19,7 +19,7 @@ public static class Message
     public static void Unsubscribe(object owner)
     {
         Messages.Unsubscribe(owner);
-        foreach(var sub in EventSubs.Where(x => x.Owner.Equals(owner)))
+        foreach(var sub in EventSubs.Where(x => x.Owner.Equals(owner)).ToList())
             EventSubs.Remove(sub);
     }
     
